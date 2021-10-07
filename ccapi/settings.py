@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '1uba4jy)qx4#q^k9mtid8bri%^xg3g
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['https://caloriecounterapi.herokuapp.com',]
+ALLOWED_HOSTS = ['caloriecounterapi.herokuapp.com',]
 
 # Application definition
 
