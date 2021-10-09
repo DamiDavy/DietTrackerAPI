@@ -2,7 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class DailyCalorieIntake(models.Model):
-  username = models.CharField(max_length=64, unique=True)
+  user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        default=1
+    )
+  # username = models.CharField(max_length=64, unique=True)
   daily_calorie_intake = models.IntegerField()
 
   def __str__(self):

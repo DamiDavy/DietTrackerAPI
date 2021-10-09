@@ -14,7 +14,7 @@ class FoodItemAdmin(admin.ModelAdmin):
   list_display = ('food', 'date', 'weight', 'id', 'date_id', 'date_for_search')
 
 class DailyCalorieIntakeAdmin(admin.ModelAdmin):
-  list_display = ('username', 'daily_calorie_intake')
+  list_display = ('user', 'daily_calorie_intake')
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Food, FoodAdmin)
