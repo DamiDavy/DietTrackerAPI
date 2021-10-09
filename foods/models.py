@@ -1,17 +1,17 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# class DailyCalorieIntake(models.Model):
-#   user = models.OneToOneField(
-#         User,
-#         on_delete=models.CASCADE,
-#         default=1
-#     )
-#   username = models.CharField(max_length=64, blank=True)
-#   daily_calorie_intake = models.IntegerField() 
+class DailyCalorieIntake(models.Model):
+  # user = models.OneToOneField(
+  #       User,
+  #       on_delete=models.CASCADE,
+  #       default=1
+  #   )
+  username = models.CharField(max_length=64, unique=True)
+  daily_calorie_intake = models.IntegerField() 
 
-  # def __str__(self):
-  #   return '%s %s' % (self.username, self.daily_calorie_intake)
+  def __str__(self):
+    return '%s %s' % (self.username, self.daily_calorie_intake)
 
 class Category(models.Model):
   title = models.CharField(max_length=64, unique=True)
