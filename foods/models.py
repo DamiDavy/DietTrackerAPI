@@ -7,8 +7,8 @@ class DailyCalorieIntake(models.Model):
         on_delete=models.CASCADE,
         default=1
     )
-  # username = models.CharField(max_length=64, unique=True)
-  daily_calorie_intake = models.IntegerField()
+  username = models.CharField(max_length=64, blank=True)
+  daily_calorie_intake = models.IntegerField() 
 
   def __str__(self):
     return '%s %s' % (self.username, self.daily_calorie_intake)
