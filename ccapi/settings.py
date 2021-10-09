@@ -146,7 +146,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-CORS_ORIGIN_WHITELIST = 'https://canthin.netlify.app',
+CORS_ORIGIN_WHITELIST = 'https://canthin.netlify.app', 'http://localhost:9000'
 
 CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
 CORS_ALLOW_CREDENTIALS = True

@@ -5,7 +5,8 @@ class DailyCalorieIntake(models.Model):
   # user = models.OneToOneField(
   #       User,
   #       on_delete=models.CASCADE,
-  #       default=1
+  #       default=1,
+
   #   )
   username = models.CharField(max_length=64, unique=True)
   daily_calorie_intake = models.IntegerField() 
