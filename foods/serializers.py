@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from foods.models import Category, Food, FoodItem, Day, DailyCalorieIntake
+from foods.models import Category, Food, FoodItem, Day
+# DailyCalorieIntake
 
 class FoodSerializer(serializers.ModelSerializer):
   class Meta:
@@ -30,10 +31,10 @@ class FoodItemSerializer(serializers.ModelSerializer):
     model = FoodItem
     fields = '__all__'
 
-class DailyCalorieIntakeSerializer(serializers.ModelSerializer):
-  class Meta:
-    model = DailyCalorieIntake
-    fields = '__all__'
+# class DailyCalorieIntakeSerializer(serializers.ModelSerializer):
+#   class Meta:
+#     model = DailyCalorieIntake
+#     fields = '__all__'
 
   # def create(self, validated_data):
   #   daily_calorie_intake, created = DailyCalorieIntake.objects.update_or_create(

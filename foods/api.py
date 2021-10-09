@@ -1,6 +1,8 @@
 from rest_framework import viewsets, permissions, filters
-from foods.models import Category, Food, FoodItem, Day, DailyCalorieIntake
-from .serializers import FoodSerializer, CategorySerializer, FoodItemSerializer, DaySerializer, DailyCalorieIntakeSerializer
+from foods.models import Category, Food, FoodItem, Day
+# DailyCalorieIntake
+from .serializers import FoodSerializer, CategorySerializer, FoodItemSerializer, DaySerializer
+# DailyCalorieIntakeSerializer
 # from rest_framework import filters
 
 class CategoryViewSet(viewsets.ModelViewSet):
@@ -54,12 +56,12 @@ class FoodItemViewSet(viewsets.ModelViewSet):
   #     except Day.DoesNotExist:
   #       return 
 
-class DailyCalorieIntakeViewSet(viewsets.ModelViewSet):
-  queryset = DailyCalorieIntake.objects.all()
-  permission_classes = [
-    permissions.IsAuthenticated
-  ]
-  serializer_class = DailyCalorieIntakeSerializer
+# class DailyCalorieIntakeViewSet(viewsets.ModelViewSet):
+#   queryset = DailyCalorieIntake.objects.all()
+#   permission_classes = [
+#     permissions.IsAuthenticated
+#   ]
+#   serializer_class = DailyCalorieIntakeSerializer
 
-  filter_backends = [filters.SearchFilter]
-  search_fields = ['=username']
+#   filter_backends = [filters.SearchFilter]
+#   search_fields = ['=username']
